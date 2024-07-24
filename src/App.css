@@ -1,38 +1,185 @@
-.App {
-  text-align: center;
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-left {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #e52e71, #ff8a00);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes twinkle {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                    0 0 20px rgba(255, 255, 255, 0.5),
+                    0 0 30px rgba(255, 255, 255, 0.5),
+                    0 0 40px rgba(255, 255, 255, 0.5),
+                    0 0 50px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2),
+                    0 0 10px rgba(255, 255, 255, 0.2),
+                    0 0 15px rgba(255, 255, 255, 0.2),
+                    0 0 20px rgba(255, 255, 255, 0.2),
+                    0 0 25px rgba(255, 255, 255, 0.2);
+    }
 }
 
-.App-link {
-  color: #61dafb;
+.Todo-list {
+    width: 100%;
+    max-width: 540px;
+    background: transparent;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    border: 2px solid white; 
+    animation: twinkle 2s infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Todo-list h1 i{
+        margin-right: 10px; 
+        font-size: 1em; 
+}
+.top-left {
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  width: 300px; 
+  height: auto; 
+  z-index: 1000; 
+}
+
+.Todo-list h1 {
+    font-size: 54px; 
+    color: #fff; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-family: 'Arial', sans-serif; 
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px 0 0 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #a75228;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #883621;
+} 
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(/public/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.completed {
+    text-decoration: line-through;
+    color: #555;
+}
+
+ul li.completed::before {
+    background-image: url(/public/images/checked.png);
+}
+
+.delete-btn {
+    position: absolute;
+    top: 50%;
+    left: 370px; 
+    transform: translate(-50%, -50%); 
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: none; 
+    padding: 5px; 
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-btn:hover {
+    background-color: transparent; 
+}
+
+.delete-all-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #a75228;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px; 
+    margin-left: 370px;
+}
+
+.delete-all-btn:hover {
+    background-color:  #883621;
+}
+
+.Todo-list h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-top: 20px; 
 }
