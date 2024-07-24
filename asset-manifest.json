@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Darylsilva500/Todo-List-Using-React/static/css/main.3ee38f80.css",
+    "main.js": "/Darylsilva500/Todo-List-Using-React/static/js/main.c68fa604.js",
+    "static/js/453.4869e0f5.chunk.js": "/Darylsilva500/Todo-List-Using-React/static/js/453.4869e0f5.chunk.js",
+    "index.html": "/Darylsilva500/Todo-List-Using-React/index.html",
+    "main.3ee38f80.css.map": "/Darylsilva500/Todo-List-Using-React/static/css/main.3ee38f80.css.map",
+    "main.c68fa604.js.map": "/Darylsilva500/Todo-List-Using-React/static/js/main.c68fa604.js.map",
+    "453.4869e0f5.chunk.js.map": "/Darylsilva500/Todo-List-Using-React/static/js/453.4869e0f5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ee38f80.css",
+    "static/js/main.c68fa604.js"
+  ]
+}
